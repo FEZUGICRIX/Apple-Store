@@ -1,0 +1,15 @@
+.cart-container {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 300px;
+  width: 300px;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+.cart_elemetn__img {
+  height: 30px;
+  object-fit: contain;
+}

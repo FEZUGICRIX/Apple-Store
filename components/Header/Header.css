@@ -1,0 +1,30 @@
+.header {
+  background: var(--color-header);
+  height: 120px;
+}
+
+.header__counter {
+  height: 8px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  right: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background: #f55123;
+  z-index: 2;
+  cursor: pointer;
+
+}
+
+.header__cart {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 20px;
+  background: url('Cart/image/cart-shopping-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
