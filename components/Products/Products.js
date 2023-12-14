@@ -12,6 +12,8 @@ class Products {
     addLocationStorage(element, id) {
         const {pushProducts, products} = localStorageUtil.putProducts(id);
         header.render(products.length)
+        cart.render()
+        cart.productsCounter()
         
         if (pushProducts) {
             element.classList.add(this.NameActiveClass);
@@ -26,7 +28,7 @@ class Products {
         const products = localStorageUtil.getProducts();
         let htmlCatalog = '';
 
-        CATALOG.forEach(({id, name, img, price}) => {
+        CATALOG.forEach(({id, name, img, price, rating}) => {
             if (products.indexOf(id) === -1) {
                 this.totalNameClass = this.NameClass;
                 this.totalText = this.text;
@@ -39,12 +41,15 @@ class Products {
             htmlCatalog += `
             <li class="products_element">
                 <img  class="products_element__img" src="${img}">
-                <span class="products_element__price" >${price.toLocaleString()}$</span>
+                <div class="products_element__price-raiting">
+                    <span class="products_element__price" >${price.toLocaleString()}$</span>
+                    <div class="products_element__rating-star">${rating}  <span class="star"></span></div>
+                </div>
                 <span class="products_element__name" >${name}</span>
                 <button 
-                  class="${this.totalNameClass} products_element__btn" 
-                  onclick="productsPage.addLocationStorage(this,'${id}')">
-                  ${this.totalText}
+                class="${this.totalNameClass} products_element__btn" 
+                onclick="productsPage.addLocationStorage(this,'${id}')">
+                ${this.totalText}
                 </button>
             </li>
             `
