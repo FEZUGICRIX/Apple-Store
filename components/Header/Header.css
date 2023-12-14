@@ -1,6 +1,12 @@
 .header {
+
   background: var(--color-header);
   height: 120px;
+}
+
+.header-wrapper {
+  cursor: pointer;
+
 }
 
 .header__counter {
@@ -14,8 +20,6 @@
   color: var(--color-white);
   background: #f55123;
   z-index: 2;
-  cursor: pointer;
-
 }
 
 .header__cart {
@@ -24,7 +28,12 @@
   height: 60px;
   top: 20px;
   right: 20px;
-  background: url('Cart/image/cart-shopping-svgrepo-com.svg');
+  background: url('image/cart-shopping-svgrepo-com.svg');
   background-repeat: no-repeat;
-  cursor: pointer;
+}
+
+.cart_elemetn__price {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 18px;
 }
